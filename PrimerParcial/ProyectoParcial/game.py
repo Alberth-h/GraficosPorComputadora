@@ -1161,7 +1161,7 @@ def dibujarJugador():
     if Dano > 60 and Dano < 100:
         glColor3f(.55, 0, .0)
     elif Dano > 99:
-        glColor3f(.25, 0, .0)
+        glColor3f(.35, 0, .0)
     else:
         glColor3f(.7, 0, .0)
     glBegin(GL_QUADS)
@@ -1212,9 +1212,9 @@ def dibujarJugador():
     glEnd()
     
     #ventana
-    if Dano < 60:
+    if Dano <= 60:
         glBegin(GL_QUADS)
-        glColor3f(.0, 0.5, 0.5)
+        glColor3f(0.0, 0.5, 0.5)
         glVertex3f(-.4, 0.0, 0.0)
         glVertex3f(-.5, 0.2, 0.0)
         glVertex3f(.5, 0.2, 0.0)
@@ -1222,7 +1222,7 @@ def dibujarJugador():
         glEnd()
     if Dano > 60:
         glBegin(GL_QUADS)
-        glColor3f(.2, 0.0, 0.0)
+        glColor3f(0.15, 0.0, 0.0)
         glVertex3f(-.4, 0.0, 0.0)
         glVertex3f(-.5, 0.2, 0.0)
         glVertex3f(.5, 0.2, 0.0)
