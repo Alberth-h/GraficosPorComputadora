@@ -215,11 +215,11 @@ def actualizar(window):
 
     if psY_Tramo < -2.0:
         psY_Tramo = 2.0
-    elif psY_TramoAux < -2.0:
+    if psY_TramoAux < -2.0:
         psY_TramoAux = 2.0
-    elif psY_CalleTrans < -2.0:
+    if psY_CalleTrans < -2.0:
         psY_CalleTrans = 6.11
-    elif psY_CaminoTrans < -3.0:
+    if psY_CaminoTrans < -3.0:
         psY_CaminoTrans = 20.0
 
     if psY_Cono < -1.01:
@@ -254,26 +254,27 @@ def actualizar(window):
         psX_vaca = -1.0
         psY_vaca = psY_CaminoTrans + 1.0
 
-    if psY_Policia + 0.1 > psY_Cono - 0.03 and psX_jugador + 0.05 > psX_Cono - 0.03 and psX_jugador - 0.05 <  psX_Cono - 0.03:
-        psY_Policia = psY_Policia - movimientoCarretera
-    elif psY_Policia + 0.1 > psY_Barril - 0.05 and psX_jugador + 0.05 > psX_Barril - 0.03 and psX_jugador - 0.05 <  psX_Barril - 0.03:
-        psY_Policia = psY_Policia - movimientoCarretera
-    elif psY_Policia + 0.1 > psY_PonLlan - 0.0125 and psX_jugador + 0.05 > psX_PonLlan - 0.05 and psX_jugador - 0.05 <  psX_PonLlan - 0.05:
-        psY_Policia = psY_Policia - movimientoCarretera
-    elif psY_Policia + 0.1 > psY_Barrera - 0.05 and psX_jugador + 0.05 > psX_Barrera - 0.1 and psX_jugador - 0.05 <  psX_Barrera - 0.1:
-        psY_Policia = psY_Policia - movimientoCarretera
-    elif psY_Policia + 0.1 > psY_Carro1 - 0.1 and psX_jugador + 0.05 > psX_Carro1 - 0.05 and psX_jugador - 0.05 <  psX_Carro1 - 0.05:
-        psY_Policia = psY_Policia - movimientoCarretera
-    elif psY_Policia + 0.1 > psY_Carro2 - 0.1 and psX_jugador + 0.05 > psX_Carro2 - 0.05 and psX_jugador - 0.05 <  psX_Carro2 - 0.05:
-        psY_Policia = psY_Policia - movimientoCarretera
-    elif psY_Policia + 0.1 > psY_Carro3 - 0.1 and psX_jugador + 0.05 > psX_Carro3 - 0.05 and psX_jugador - 0.05 <  psX_Carro3 - 0.05:
-        psY_Policia = psY_Policia - movimientoCarretera
-    elif psY_Policia + 0.1 > psY_Carro4 - 0.1 and psX_jugador + 0.05 > psX_Carro4 - 0.05 and psX_jugador - 0.05 <  psX_Carro4 - 0.05:
-        psY_Policia = psY_Policia - movimientoCarretera
-    elif psY_Policia + 0.1 > psY_Carro5 - 0.1 and psX_jugador + 0.05 > psX_Carro5 - 0.05 and psX_jugador - 0.05 <  psX_Carro5 - 0.05:
-        psY_Policia = psY_Policia - movimientoCarretera
-    elif psY_Policia + 0.1 > psY_vaca - 0.55 and psX_jugador + 0.05 > psX_vaca - 0.055 and psX_jugador - 0.05 <  psX_vaca - 0.055:
-        psY_Policia = psY_Policia - movimientoCarretera
+    if Dano < 120:   
+        if psY_Policia + 0.1 > psY_Cono - 0.03 and psX_jugador + 0.05 > psX_Cono - 0.03 and psX_jugador - 0.05 <  psX_Cono - 0.03:
+            psY_Policia = psY_Policia - movimientoCarretera
+        elif psY_Policia + 0.1 > psY_Barril - 0.05 and psX_jugador + 0.05 > psX_Barril - 0.03 and psX_jugador - 0.05 <  psX_Barril - 0.03:
+            psY_Policia = psY_Policia - movimientoCarretera
+        elif psY_Policia + 0.1 > psY_PonLlan - 0.0125 and psX_jugador + 0.05 > psX_PonLlan - 0.05 and psX_jugador - 0.05 <  psX_PonLlan - 0.05:
+            psY_Policia = psY_Policia - movimientoCarretera
+        elif psY_Policia + 0.1 > psY_Barrera - 0.05 and psX_jugador + 0.05 > psX_Barrera - 0.1 and psX_jugador - 0.05 <  psX_Barrera - 0.1:
+            psY_Policia = psY_Policia - movimientoCarretera
+        elif psY_Policia + 0.1 > psY_Carro1 - 0.1 and psX_jugador + 0.05 > psX_Carro1 - 0.05 and psX_jugador - 0.05 <  psX_Carro1 - 0.05:
+            psY_Policia = psY_Policia - movimientoCarretera
+        elif psY_Policia + 0.1 > psY_Carro2 - 0.1 and psX_jugador + 0.05 > psX_Carro2 - 0.05 and psX_jugador - 0.05 <  psX_Carro2 - 0.05:
+            psY_Policia = psY_Policia - movimientoCarretera
+        elif psY_Policia + 0.1 > psY_Carro3 - 0.1 and psX_jugador + 0.05 > psX_Carro3 - 0.05 and psX_jugador - 0.05 <  psX_Carro3 - 0.05:
+            psY_Policia = psY_Policia - movimientoCarretera
+        elif psY_Policia + 0.1 > psY_Carro4 - 0.1 and psX_jugador + 0.05 > psX_Carro4 - 0.05 and psX_jugador - 0.05 <  psX_Carro4 - 0.05:
+            psY_Policia = psY_Policia - movimientoCarretera
+        elif psY_Policia + 0.1 > psY_Carro5 - 0.1 and psX_jugador + 0.05 > psX_Carro5 - 0.05 and psX_jugador - 0.05 <  psX_Carro5 - 0.05:
+            psY_Policia = psY_Policia - movimientoCarretera
+        elif psY_Policia + 0.1 > psY_vaca - 0.55 and psX_jugador + 0.05 > psX_vaca - 0.055 and psX_jugador - 0.05 <  psX_vaca - 0.055:
+            psY_Policia = psY_Policia - movimientoCarretera
 
     if psY_Policia < -1.0:
         psY_Policia = -0.9
@@ -329,7 +330,7 @@ def actualizar(window):
         if condicionYN == True:
             psY_jugador = psY_jugador - movimiento
     
-    if Dano > 120:
+    if Dano >= 120:
         condicionXP = False
         condicionXN = False
         condicionYP = False
@@ -348,8 +349,6 @@ def actualizar(window):
         psX_vaca = psX_vaca - movimiento
         psY_Policia = psY_Policia + movimiento
         if psY_Policia + 0.1 > psY_jugador - 0.1:
-            psY_Policia = psY_Policia + movimientoCarretera
-            psY_Policia = psY_Policia - movimiento
             print("Has sido arrestado!!!")
             print(("Has durado en la persecución por:"), tiempo, ("segundos"))
             sys.exit()
