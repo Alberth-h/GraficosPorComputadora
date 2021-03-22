@@ -81,6 +81,10 @@ class Carrito:
         else:
             self.colisionando = False
 
+        if self.disparando and obstaculo.vivo and bala.posx + 0.01 > obstaculo.posx - 0.15 and bala.posx - 0.01 < obstaculo.posx + 0.15 and bala.posy + 0.01 > obstaculo.posy - 0.15 and bala.posy - 0.01 < obstaculo.posy + 0.15:
+            obstaculo.vivo = False
+            self.disparando = False
+
     def disparar(self):
         global bala
         self.disparando = True
